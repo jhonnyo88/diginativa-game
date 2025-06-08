@@ -1,3 +1,6 @@
+Det här projektet väntar på att påbörjas så snart AI-teamet som ska jobba med det är utvecklat, teamet byggs som en referensimplementation som går att ta del av här: https://github.com/jhonnyo88/multi-agent-setup
+
+
 ### License: Creative Commons BY-NC-SA 4.0
 This project is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International license. See the `LICENSE` file for full details.
 
