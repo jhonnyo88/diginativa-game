@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 📖 AI Team Documentation
+    url: https://github.com/jhonnyo88/multi-agent-setup/blob/main/README.md
+    about: Complete guide to working with your AI development team
+  - name: 🤖 AI Team Repository  
+    url: https://github.com/jhonnyo88/multi-agent-setup
+    about: View AI team coordination and internal processes
+  - name: 💬 AI Team Discussions
+    url: https://github.com/jhonnyo88/multi-agent-setup/discussions
+    about: Ask questions about AI team management
+  - name: 📊 AI Team Status Dashboard
+    url: https://github.com/jhonnyo88/multi-agent-setup/actions
+    about: Check current status of AI development team

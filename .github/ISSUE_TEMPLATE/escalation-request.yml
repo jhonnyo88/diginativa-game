@@ -1,0 +1,16 @@
+name: 🚨 Escalation Request (AI-Team Internal)
+description: AI team requests human guidance on complex issue
+title: "[ESCALATION] "
+labels: ["escalation", "ai-team", "needs-human-input"]  # Lägg till ai-team label
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🤖 AI-Team Escalation
+        
+        This escalation was automatically created by the AI team when they encountered
+        an issue that requires human judgment or input.
+        
+        **Please respond with guidance in the comments below.**
