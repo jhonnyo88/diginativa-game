@@ -125,10 +125,9 @@ body:
       label: Municipal Use Case & Policy Alignment
       description: "Describe the specific municipal context and how this aligns with digitalization policies"
       placeholder: |
-        - Which municipal processes/workflows does this support?
-        - How does this align with Swedish digitalization initiatives?
-        - What policy requirements does this address?
-        - Expected impact on municipal efficiency/citizen service?
+        **Municipal Process:** Which processes/workflows does this support?
+        **Policy Alignment:** How does this align with Swedish digitalization initiatives?
+        **Expected Impact:** What impact on municipal efficiency/citizen service?
       value: |
         **Municipal Process:** 
         **Policy Alignment:** 
@@ -141,7 +140,7 @@ body:
     attributes:
       value: |
         ---
-        ## 🎯 LEARNING OBJECTIVES
+        ## 🎓 LEARNING OBJECTIVES
 
   - type: checkboxes
     id: learning_objectives
@@ -168,11 +167,10 @@ body:
       label: Success Metrics & Measurement
       description: "How will we measure if this feature achieves its learning objectives?"
       placeholder: |
-        - Completion rate targets (e.g., >90% completion)
-        - User satisfaction scores (e.g., >4.5/5)
-        - Knowledge retention measures (e.g., post-training assessments)
-        - Behavioral change indicators (e.g., policy implementation rate)
-        - Time efficiency improvements (e.g., 20% faster task completion)
+        **Completion Rate Target:** (e.g., >90% completion)
+        **Satisfaction Score Target:** (e.g., >4.5/5)
+        **Knowledge Retention Measure:** (e.g., post-training assessments)
+        **Behavioral Impact Expected:** (e.g., policy implementation rate)
       value: |
         **Completion Rate Target:** 
         **Satisfaction Score Target:** 
@@ -211,13 +209,28 @@ body:
     validations:
       required: true
 
-  # Technical Specifications (Critical for AI Team)
-  - type: markdown
+  # Detailed Requirements
+  - type: textarea
+    id: acceptance_criteria
     attributes:
+      label: Acceptance Criteria (Detailed)
+      description: "Specific, testable criteria for completion. AI team uses these for validation. MAXIMUM 5 criteria for DNA compliance."
+      placeholder: |
+        - [ ] User can access new feature from main navigation
+        - [ ] Feature loads within 2 seconds on standard broadband
+        - [ ] All text content is available in Swedish
+        - [ ] Feature works correctly on desktop, tablet, and mobile
+        - [ ] Accessibility: All interactive elements keyboard accessible
       value: |
-        ---
-        ## 💻 TECHNICAL SPECIFICATIONS
+        - [ ] 
+        - [ ] 
+        - [ ] 
+        - [ ] 
+        - [ ] 
+    validations:
+      required: true
 
+  # Technical Specifications (AI Team Ready)
   - type: checkboxes
     id: technical_requirements
     attributes:
@@ -276,91 +289,6 @@ body:
     validations:
       required: true
 
-  # Detailed Requirements
-  - type: textarea
-    id: acceptance_criteria
-    attributes:
-      label: Acceptance Criteria (Detailed)
-      description: "Specific, testable criteria for completion. AI team uses these for validation."
-      placeholder: |
-        - [ ] User can access new feature from main navigation
-        - [ ] Feature loads within 2 seconds on standard broadband
-        - [ ] All text content is available in Swedish
-        - [ ] Feature works correctly on desktop, tablet, and mobile
-        - [ ] Accessibility: All interactive elements keyboard accessible
-        - [ ] Accessibility: Screen reader announcements work correctly
-        - [ ] Feature integrates with existing user progress tracking
-        - [ ] Success metrics can be collected and reported
-        - [ ] Error states are handled gracefully with helpful messages
-        - [ ] Feature follows DigiNativa visual design standards
-      value: |
-        - [ ] 
-        - [ ] 
-        - [ ] 
-        - [ ] 
-        - [ ] 
-    validations:
-      required: true
-
-  - type: input
-    id: dependencies
-    attributes:
-      label: Feature Dependencies
-      description: "Other GitHub Issues or features that must be completed first"
-      placeholder: "#123 (user authentication), #124 (progress tracking API)"
-
-  - type: textarea
-    id: technical_considerations
-    attributes:
-      label: Technical Considerations & Constraints
-      description: "Any technical constraints, integrations, or specific requirements?"
-      placeholder: |
-        **Integrations Required:**
-        - External APIs to integrate with
-        - Database schema changes needed
-        - Third-party services involved
-        
-        **Security Considerations:**
-        - Data privacy requirements
-        - Authentication/authorization needs
-        - Compliance requirements (GDPR, etc.)
-        
-        **Performance Constraints:**
-        - Load time requirements
-        - Concurrent user expectations
-        - Data volume considerations
-        
-        **Browser/Device Support:**
-        - Specific browser requirements
-        - Mobile device considerations
-        - Accessibility standards
-
-  # AI Team Processing Section
-  - type: markdown
-    attributes:
-      value: |
-        ---
-        ## 🤖 AI TEAM PROCESSING
-
-  - type: input
-    id: story_id_prefix
-    attributes:
-      label: Story ID Prefix (Optional)
-      description: "Custom prefix for story tracking (default: auto-generated)"
-      placeholder: "POLICY-TRAIN"
-
-  - type: checkboxes
-    id: agent_assignments
-    attributes:
-      label: Special Agent Instructions (Optional)
-      description: "Any specific instructions for AI team agents?"
-      options:
-        - label: "🎨 **Game Designer Focus** - Emphasize interactive/gamification elements"
-        - label: "💻 **Developer Focus** - Complex technical implementation expected"
-        - label: "🧪 **Test Engineer Focus** - Extra emphasis on edge case testing"
-        - label: "🔍 **QA Focus** - Intensive accessibility and persona testing needed"
-        - label: "⚡ **Performance Focus** - Critical performance optimization required"
-
   # Additional Context
   - type: textarea
     id: additional_context
@@ -371,7 +299,6 @@ body:
         **Visual References:** (screenshots, mockups, design inspiration)
         **Related Research:** (user studies, policy documents, best practices)
         **Similar Features:** (examples from other systems)
-        **Stakeholder Input:** (feedback from users or management)
         **Related Issues:** (#123, #124)
 
   # Process Information
@@ -418,23 +345,4 @@ body:
         - **Medium Features:** 3-5 days end-to-end  
         - **Complex Features:** 1-2 weeks end-to-end
         
-        ### Monitoring & Communication:
-        - Real-time progress updates via GitHub issue comments
-        - Automatic quality gate notifications
-        - DNA compliance validation reports
-        - Feature branch creation for review
-        
         **Your feature will be ready for testing in the preview environment once all quality gates pass!** 🚀
-
-  - type: markdown
-    attributes:
-      value: |
-        ## 📚 RESOURCES & DOCUMENTATION
-        
-        - **[Project DNA Documentation](../../docs/dna/)** - Understanding DigiNativa's design & architecture principles
-        - **[AI Team Guide](../../docs/project-management/AI_TEAM_GUIDE.md)** - How the autonomous development process works
-        - **[Component Library](../../docs/dna/component_library.md)** - Available UI components (Shadcn/UI + Kenney.UI)
-        - **[Anna Persona Guide](../../docs/dna/target_audience.md)** - Understanding our primary user persona
-        - **[Performance Standards](../../docs/quality/PERFORMANCE_REQUIREMENTS.md)** - Technical requirements and benchmarks
-        
-        **Questions?** The AI team will automatically request clarification via issue comments if needed.
