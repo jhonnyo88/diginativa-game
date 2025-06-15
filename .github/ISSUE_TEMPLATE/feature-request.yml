@@ -1,32 +1,33 @@
-name: 🚀 Feature Request (AI-Team)
-description: Request a new feature for DigiNativa - analyzed by our AI team
+name: 🚀 Feature Request (DigiNativa AI Team)
+description: Request a new feature for DigiNativa - processed by our autonomous AI development team
 title: "[FEATURE] "
-labels: ["enhancement", "ai-team"]
+labels: ["enhancement", "ai-team", "dna-validation-required"]
 assignees: []
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## AI-Team Feature Analysis
+        ## 🤖 DigiNativa AI Team Processing
         
-        Your request will be automatically analyzed by our AI team of specialist agents who will:
+        Your request will be autonomously processed by our specialized AI development team:
         
-        1. **🎯 Projektledare** - Analyzes alignment with project goals
-        2. **🎨 Speldesigner** - Creates pedagogical game mechanics  
-        3. **💻 Utvecklare** - Implements React + FastAPI code
-        4. **🧪 Testutvecklare** - Creates automated tests
-        5. **🔍 QA-Testare** - Tests from user perspective
-        6. **⚡ Kvalitetsgranskare** - Validates performance & quality
+        1. **🎯 Project Manager** - DNA validation & story breakdown
+        2. **🎨 Game Designer** - Pedagogical mechanics & UX specs (Shadcn/UI + Kenney.UI)
+        3. **💻 Developer** - React+TypeScript+FastAPI implementation
+        4. **🧪 Test Engineer** - Automated testing (100% coverage)
+        5. **🔍 QA Tester** - Anna persona validation & accessibility
+        6. **⚡ Quality Reviewer** - Performance & production readiness
         
-        Please provide detailed information to help our AI team create the best solution!
+        **All features must comply with DigiNativa's Project DNA for autonomous processing.**
 
+  # Basic Feature Information
   - type: input
     id: feature_summary
     attributes:
       label: Feature Summary
       description: Brief, clear description of what you want
-      placeholder: "Add user progress tracking dashboard"
+      placeholder: "Add municipal policy training module with interactive scenarios"
     validations:
       required: true
 
@@ -34,129 +35,406 @@ body:
     id: user_story
     attributes:
       label: User Story
-      description: Describe from the user's perspective
-      placeholder: "As Anna (public sector employee), I want to see my learning progress so that I can track my digitalization competency development..."
-      value: "As [user type], I want [functionality] so that [benefit/goal]..."
+      description: Describe from the user's perspective with clear value proposition
+      placeholder: "As Anna (kommunal förvaltare), I want to practice applying new digital policies in realistic scenarios so that I can confidently implement them in my daily work without making costly mistakes..."
+      value: "As [specific user persona], I want [specific functionality] so that [clear measurable benefit/outcome]..."
     validations:
       required: true
 
-  - type: dropdown
-    id: target_audience
+  # DNA Compliance Section (Critical)
+  - type: markdown
     attributes:
-      label: Primary Target Audience
-      description: Who is this feature primarily for?
-      options:
-        - Anna (Offentlig förvaltare - primary persona)
-        - Erik (IT-chef - technical implementer)  
-        - Margareta (Kommunchef - decision maker)
-        - David (Handläggare - frontline user)
-        - System administrators
-        - Other (specify in description)
-    validations:
-      required: true
+      value: |
+        ---
+        ## 🧬 PROJECT DNA COMPLIANCE (REQUIRED)
+        
+        **All features MUST align with DigiNativa's Project DNA to be processed by the AI team.**
 
   - type: checkboxes
     id: design_principles
     attributes:
-      label: Design Principles Alignment
-      description: Which of our 5 core design principles does this feature support?
+      label: Design Principles Alignment (5 Core Principles)
+      description: "Select ALL principles this feature supports. Features must support at least 3 principles for AI processing."
       options:
-        - label: "🎓 **Pedagogik Framför Allt** - Serves educational goals about digitalization strategy"
-        - label: "🌉 **Policy till Praktik** - Bridges abstract concepts to practical reality"
-        - label: "⏰ **Respekt för Tid** - Respects user's time constraints (<10 min sessions)"
-        - label: "🔗 **Helhetssyn** - Shows system connections and interactions"
-        - label: "🎯 **Intelligens, Inte Infantilisering** - Professional tone and sophistication"
+        - label: "🎓 **Pedagogik Framför Allt** - Serves clear educational goals about digitalization strategy"
+        - label: "🌉 **Policy till Praktik** - Bridges abstract policy concepts to practical implementation"
+        - label: "⏰ **Respekt för Tid** - Respects busy schedules (≤10 minute learning sessions)"
+        - label: "🔗 **Helhetssyn** - Shows system connections and holistic thinking"
+        - label: "🎯 **Intelligens, Inte Infantilisering** - Professional tone and sophisticated approach"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: architecture_principles
+    attributes:
+      label: Architecture Principles Compliance (4 Core Principles)
+      description: "Confirm this feature aligns with our technical architecture. AI team will validate during implementation."
+      options:
+        - label: "🔌 **API-First Design** - All functionality accessible via REST APIs"
+        - label: "🚫 **Stateless Backend** - No server-side sessions, all state from client"
+        - label: "🎯 **Separation of Concerns** - Frontend and backend remain completely separate"
+        - label: "💎 **Simplicity First** - Choose simplest solution that works"
+    validations:
+      required: true
+
+  # Municipal Context (Critical for Swedish Public Sector)
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🏛️ MUNICIPAL CONTEXT
 
   - type: dropdown
-    id: complexity
+    id: target_audience
     attributes:
-      label: Estimated Complexity
-      description: How complex do you think this feature is?
+      label: Primary Target Persona
+      description: "Which specific DigiNativa persona is this for?"
       options:
-        - Simple (1-2 hours implementation)
-        - Medium (1-2 days implementation)
-        - Complex (1+ weeks implementation)
-        - Unknown
+        - Anna (Offentlig förvaltare - primary learning persona)
+        - Erik (IT-chef - technical implementation lead)  
+        - Margareta (Kommunchef - strategic decision maker)
+        - David (Handläggare - frontline service delivery)
+        - System administrators
+        - Other (specify in Municipal Use Case)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: municipal_department
+    attributes:
+      label: Municipal Department Focus
+      description: "Which department/area will primarily use this feature?"
+      options:
+        - Kommunledning (Municipal management)
+        - IT-avdelning (IT department)
+        - HR/Personalavdelning (Human resources)
+        - Medborgarservice (Citizen services)
+        - Ekonomiavdelning (Finance department)
+        - Teknik och miljö (Technical & environmental)
+        - Utbildning (Education)
+        - Vård och omsorg (Healthcare & elderly care)
+        - Kultur och fritid (Culture & leisure)
+        - Cross-departmental
+        - Other (specify below)
     validations:
       required: true
 
   - type: textarea
-    id: acceptance_criteria
+    id: municipal_use_case
     attributes:
-      label: Acceptance Criteria
-      description: How will we know this feature is complete and working?
+      label: Municipal Use Case & Policy Alignment
+      description: "Describe the specific municipal context and how this aligns with digitalization policies"
       placeholder: |
-        - [ ] User can view progress dashboard
-        - [ ] Progress shows completion percentage
-        - [ ] Dashboard loads in <2 seconds
-        - [ ] Works on mobile devices
+        - Which municipal processes/workflows does this support?
+        - How does this align with Swedish digitalization initiatives?
+        - What policy requirements does this address?
+        - Expected impact on municipal efficiency/citizen service?
       value: |
-        - [ ] 
-        - [ ] 
-        - [ ] 
+        **Municipal Process:** 
+        **Policy Alignment:** 
+        **Expected Impact:** 
+    validations:
+      required: true
+
+  # Learning Objectives (Critical for Pedagogical Success)
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🎯 LEARNING OBJECTIVES
+
+  - type: checkboxes
+    id: learning_objectives
+    attributes:
+      label: Learning Objectives (Check all that apply)
+      description: "What should users learn/achieve through this feature?"
+      options:
+        - label: "📋 **Policy Understanding** - Comprehend new digitalization policies"
+        - label: "🔧 **Practical Application** - Apply policies to real work scenarios" 
+        - label: "🤝 **Stakeholder Engagement** - Improve collaboration across departments"
+        - label: "📊 **Data-Driven Decisions** - Use data to inform municipal decisions"
+        - label: "🛡️ **Risk Management** - Identify and mitigate digitalization risks"
+        - label: "🎯 **Strategic Thinking** - Understand long-term digital transformation"
+        - label: "💡 **Innovation Mindset** - Embrace new digital solutions"
+        - label: "👥 **Change Management** - Lead organizational digital change"
+        - label: "🔒 **Security Awareness** - Understand digital security requirements"
+        - label: "📈 **Performance Measurement** - Track and evaluate digital initiatives"
+    validations:
+      required: true
+
+  - type: textarea
+    id: success_metrics
+    attributes:
+      label: Success Metrics & Measurement
+      description: "How will we measure if this feature achieves its learning objectives?"
+      placeholder: |
+        - Completion rate targets (e.g., >90% completion)
+        - User satisfaction scores (e.g., >4.5/5)
+        - Knowledge retention measures (e.g., post-training assessments)
+        - Behavioral change indicators (e.g., policy implementation rate)
+        - Time efficiency improvements (e.g., 20% faster task completion)
+      value: |
+        **Completion Rate Target:** 
+        **Satisfaction Score Target:** 
+        **Knowledge Retention Measure:** 
+        **Behavioral Impact Expected:** 
+    validations:
+      required: true
+
+  # Time Constraints (Critical for DNA Compliance)
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## ⏰ TIME CONSTRAINTS
+
+  - type: dropdown
+    id: max_completion_time
+    attributes:
+      label: Maximum Completion Time
+      description: "What's the maximum time a user should spend on this feature? (DNA Principle: Respekt för Tid)"
+      options:
+        - "2 minutes (micro-learning)"
+        - "5 minutes (quick task)"
+        - "10 minutes (standard session - RECOMMENDED)"
+        - "15 minutes (complex topic - requires justification)"
+        - "20+ minutes (exceptional cases only - requires approval)"
+    validations:
+      required: true
+
+  - type: input
+    id: target_completion_time
+    attributes:
+      label: Target Completion Time
+      description: "Ideal time for most users to complete this feature"
+      placeholder: "7 minutes"
+    validations:
+      required: true
+
+  # Technical Specifications (Critical for AI Team)
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 💻 TECHNICAL SPECIFICATIONS
+
+  - type: checkboxes
+    id: technical_requirements
+    attributes:
+      label: Technical Requirements (AI Team Will Implement)
+      description: "Select applicable technical requirements"
+      options:
+        - label: "⚛️ **React Components** - Custom UI components needed"
+        - label: "🎨 **Shadcn/UI Integration** - Use existing component library"
+        - label: "🎮 **Kenney.UI Assets** - Game-style visual elements needed"
+        - label: "🔌 **API Endpoints** - New backend functionality required"
+        - label: "💾 **Database Changes** - Data model modifications needed"
+        - label: "📱 **Mobile Responsive** - Must work on mobile devices"
+        - label: "♿ **Accessibility (WCAG AA)** - Screen reader & keyboard navigation"
+        - label: "🌐 **Multi-language Support** - Swedish + English support"
+        - label: "📊 **Analytics Integration** - Usage tracking and metrics"
+        - label: "🔒 **Authentication Required** - User login needed"
+
+  - type: checkboxes
+    id: performance_requirements
+    attributes:
+      label: Performance Requirements (Non-Negotiable)
+      description: "These are automatically validated by the AI team"
+      options:
+        - label: "⚡ **API Response Time** - All endpoints must respond <200ms"
+        - label: "🚀 **Lighthouse Score** - Performance score >90"
+        - label: "📦 **Bundle Size** - Keep JavaScript bundle impact minimal"
+        - label: "📱 **Mobile Performance** - Smooth operation on mobile devices"
+        - label: "🔧 **TypeScript Compliance** - Zero TypeScript errors"
+        - label: "✅ **Test Coverage** - 100% code coverage required"
+
+  # Implementation Planning
+  - type: dropdown
+    id: complexity
+    attributes:
+      label: Estimated Implementation Complexity
+      description: "AI team will validate this assessment"
+      options:
+        - Simple (1-2 components, minimal logic) - 2-4 hours
+        - Medium (multiple components, moderate logic) - 1-2 days  
+        - Complex (system integration, advanced logic) - 3-5 days
+        - Very Complex (major feature, multiple systems) - 1-2 weeks
+        - Unknown (requires analysis)
     validations:
       required: true
 
   - type: dropdown
     id: priority
     attributes:
-      label: Priority Level
-      description: How urgent is this feature?
+      label: Business Priority Level
+      description: "How urgent is this feature for DigiNativa's success?"
       options:
-        - P0 - Critical (must do immediately)
-        - P1 - High (important for current focus) 
-        - P2 - Medium (can wait)
-        - P3 - Low (future consideration)
+        - P0 - Critical (blocking other work/users)
+        - P1 - High (key business value, current focus area) 
+        - P2 - Medium (valuable but can wait)
+        - P3 - Low (nice to have, future consideration)
+    validations:
+      required: true
+
+  # Detailed Requirements
+  - type: textarea
+    id: acceptance_criteria
+    attributes:
+      label: Acceptance Criteria (Detailed)
+      description: "Specific, testable criteria for completion. AI team uses these for validation."
+      placeholder: |
+        - [ ] User can access new feature from main navigation
+        - [ ] Feature loads within 2 seconds on standard broadband
+        - [ ] All text content is available in Swedish
+        - [ ] Feature works correctly on desktop, tablet, and mobile
+        - [ ] Accessibility: All interactive elements keyboard accessible
+        - [ ] Accessibility: Screen reader announcements work correctly
+        - [ ] Feature integrates with existing user progress tracking
+        - [ ] Success metrics can be collected and reported
+        - [ ] Error states are handled gracefully with helpful messages
+        - [ ] Feature follows DigiNativa visual design standards
+      value: |
+        - [ ] 
+        - [ ] 
+        - [ ] 
+        - [ ] 
+        - [ ] 
     validations:
       required: true
 
   - type: input
     id: dependencies
     attributes:
-      label: Dependencies
-      description: "Other GitHub Issues that must be completed first"
-      placeholder: "#123, #124"
+      label: Feature Dependencies
+      description: "Other GitHub Issues or features that must be completed first"
+      placeholder: "#123 (user authentication), #124 (progress tracking API)"
 
   - type: textarea
     id: technical_considerations
     attributes:
-      label: Technical Considerations
-      description: Any technical constraints, dependencies, or specific requirements?
+      label: Technical Considerations & Constraints
+      description: "Any technical constraints, integrations, or specific requirements?"
       placeholder: |
-        - Integrations needed (APIs, databases, services)
-        - Performance requirements
-        - Security considerations
-        - Browser/device support needs
-        - Dependencies on other features
+        **Integrations Required:**
+        - External APIs to integrate with
+        - Database schema changes needed
+        - Third-party services involved
+        
+        **Security Considerations:**
+        - Data privacy requirements
+        - Authentication/authorization needs
+        - Compliance requirements (GDPR, etc.)
+        
+        **Performance Constraints:**
+        - Load time requirements
+        - Concurrent user expectations
+        - Data volume considerations
+        
+        **Browser/Device Support:**
+        - Specific browser requirements
+        - Mobile device considerations
+        - Accessibility standards
 
-  - type: textarea
-    id: additional_context
-    attributes:
-      label: Additional Context
-      description: Screenshots, mockups, related issues, or other helpful information
-      placeholder: Add any other context, screenshots, or examples that would help our AI team understand the request better.
-
+  # AI Team Processing Section
   - type: markdown
     attributes:
       value: |
         ---
+        ## 🤖 AI TEAM PROCESSING
+
+  - type: input
+    id: story_id_prefix
+    attributes:
+      label: Story ID Prefix (Optional)
+      description: "Custom prefix for story tracking (default: auto-generated)"
+      placeholder: "POLICY-TRAIN"
+
+  - type: checkboxes
+    id: agent_assignments
+    attributes:
+      label: Special Agent Instructions (Optional)
+      description: "Any specific instructions for AI team agents?"
+      options:
+        - label: "🎨 **Game Designer Focus** - Emphasize interactive/gamification elements"
+        - label: "💻 **Developer Focus** - Complex technical implementation expected"
+        - label: "🧪 **Test Engineer Focus** - Extra emphasis on edge case testing"
+        - label: "🔍 **QA Focus** - Intensive accessibility and persona testing needed"
+        - label: "⚡ **Performance Focus** - Critical performance optimization required"
+
+  # Additional Context
+  - type: textarea
+    id: additional_context
+    attributes:
+      label: Additional Context & Resources
+      description: "Screenshots, mockups, research, related issues, or other helpful information"
+      placeholder: |
+        **Visual References:** (screenshots, mockups, design inspiration)
+        **Related Research:** (user studies, policy documents, best practices)
+        **Similar Features:** (examples from other systems)
+        **Stakeholder Input:** (feedback from users or management)
+        **Related Issues:** (#123, #124)
+
+  # Process Information
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ## 🔄 WHAT HAPPENS NEXT?
         
-        ## What Happens Next?
+        ### Autonomous AI Development Process:
         
-        1. **Automatic Analysis** - Our Projektledare agent will analyze this request within 24 hours
-        2. **Story Breakdown** - If approved, the feature will be broken down into implementable stories
-        3. **AI Development** - Our specialist agents will collaboratively build the feature
-        4. **Quality Assurance** - Automated and manual testing ensures high quality
-        5. **Deployment** - Feature goes live on the DigiNativa platform
+        1. **📋 Project Manager Analysis** (Within 4 hours)
+           - DNA compliance validation
+           - Story breakdown creation  
+           - Agent assignment optimization
         
-        **Estimated timeline:** Simple features: 2-4 days | Complex features: 1-2 weeks
+        2. **🎨 Game Designer Specification** (4-8 hours)
+           - Pedagogical game mechanics design
+           - UX specifications with Shadcn/UI components
+           - Wireframes and interaction flows
         
-        Thank you for helping improve DigiNativa! 🚀
+        3. **💻 Developer Implementation** (1-5 days based on complexity)
+           - React+TypeScript frontend development
+           - FastAPI backend implementation
+           - Git operations and branch management
+        
+        4. **🧪 Test Engineer Validation** (2-6 hours)
+           - 100% automated test coverage
+           - Performance benchmarking
+           - Security vulnerability scanning
+        
+        5. **🔍 QA Tester Experience Validation** (2-4 hours)
+           - Anna persona testing simulation
+           - Accessibility compliance (WCAG AA)
+           - User flow optimization
+        
+        6. **⚡ Quality Reviewer Final Approval** (1-2 hours)
+           - Production readiness validation
+           - Performance metrics confirmation
+           - Deployment approval
+        
+        ### Timeline Estimates:
+        - **Simple Features:** 1-2 days end-to-end
+        - **Medium Features:** 3-5 days end-to-end  
+        - **Complex Features:** 1-2 weeks end-to-end
+        
+        ### Monitoring & Communication:
+        - Real-time progress updates via GitHub issue comments
+        - Automatic quality gate notifications
+        - DNA compliance validation reports
+        - Feature branch creation for review
+        
+        **Your feature will be ready for testing in the preview environment once all quality gates pass!** 🚀
 
   - type: markdown
     attributes:
       value: |
-        ## 📖 New to AI Team Management?
-          
-        Read our [Project Owner's Guide](../../docs/project-management/PROJECT_OWNER_GUIDE.md) 
-        for complete instructions on how to work with your AI development team.
+        ## 📚 RESOURCES & DOCUMENTATION
+        
+        - **[Project DNA Documentation](../../docs/dna/)** - Understanding DigiNativa's design & architecture principles
+        - **[AI Team Guide](../../docs/project-management/AI_TEAM_GUIDE.md)** - How the autonomous development process works
+        - **[Component Library](../../docs/dna/component_library.md)** - Available UI components (Shadcn/UI + Kenney.UI)
+        - **[Anna Persona Guide](../../docs/dna/target_audience.md)** - Understanding our primary user persona
+        - **[Performance Standards](../../docs/quality/PERFORMANCE_REQUIREMENTS.md)** - Technical requirements and benchmarks
+        
+        **Questions?** The AI team will automatically request clarification via issue comments if needed.
